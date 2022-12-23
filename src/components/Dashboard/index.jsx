@@ -1,16 +1,20 @@
+import Button from './Button';
 import IconBox from './IconBox';
 import Input from './Input';
 import TitleText from './TitleText';
 import * as S from './styles';
+import iconUser from '../../assets/images/iconUser.svg';
+import iconHouse from '../../assets/images/iconHouse.svg';
+import iconForm from '../../assets/images/iconForm.svg';
 
 export default function Dashboard() {
   return (
     <S.DashboardContainer>
       <TitleText text="Criação de usuário" />
       <S.IconBoxContainer>
-        <IconBox text="Identificação do Usuário" />
-        <IconBox text="Endereço do usuário" />
-        <IconBox text="Sobre você" />
+        <IconBox icon={iconUser} text="Identificação do Usuário" />
+        <IconBox icon={iconHouse} text="Endereço do usuário" />
+        <IconBox icon={iconForm} text="Sobre você" />
       </S.IconBoxContainer>
       <S.InputContainer>
         <Input
@@ -51,6 +55,9 @@ export default function Dashboard() {
           />
         </S.InputSubContainer>
       </S.InputContainer>
+      <S.ContainerButton>
+        <Button color="#5357B1" text="Próximo passo" />
+      </S.ContainerButton>
     </S.DashboardContainer>
   );
 }
