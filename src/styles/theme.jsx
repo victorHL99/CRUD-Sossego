@@ -7,6 +7,9 @@ const theme = {
     darkGray: '#8C98A9',
     purple: '#5357B1',
     green: '#00AE63',
+    white: '#FFFFFF',
+    grayVeryLight: '#F8FAFB',
+    black: '#000000',
   },
   breakpoints: {
     mobile: '320px',
