@@ -13,6 +13,7 @@ function App() {
   const [stage, setStage] = React.useState(1);
   const [name, setName] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [confirmPassword, setConfirmPassword] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [date, setDate] = React.useState('');
   const [cep, setCep] = React.useState('');
@@ -30,6 +31,8 @@ function App() {
         setName,
         password,
         setPassword,
+        confirmPassword,
+        setConfirmPassword,
         email,
         setEmail,
         date,
