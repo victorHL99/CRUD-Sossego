@@ -13,10 +13,10 @@ import iconForm from '../../assets/images/iconForm.svg';
 import UserStage from './UserStage';
 import StageContext from '../../contexts/StageContext';
 import Address from './Address';
+import AboutYou from './AboutYou';
 
 export default function Dashboard() {
-  const { stage, setStage } = useContext(StageContext);
-  console.log(setStage);
+  const { stage } = useContext(StageContext);
 
   return (
     <S.DashboardContainer>
@@ -28,6 +28,7 @@ export default function Dashboard() {
       </S.IconBoxContainer>
       {stage === 1 ? <UserStage /> : null}
       {stage === 2 ? <Address /> : null}
+      {stage === 3 ? <AboutYou /> : null}
     </S.DashboardContainer>
   );
 }
