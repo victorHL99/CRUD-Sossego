@@ -22,3 +22,11 @@ export const AddressSubMiddle = styled.div`
   flex-direction: row;
   gap: 9px;
 `;
+
+export const ContainerButton = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-items: end;
+  margin: 50px 29px 0px 0px;
+  gap: 24px;
+`;
