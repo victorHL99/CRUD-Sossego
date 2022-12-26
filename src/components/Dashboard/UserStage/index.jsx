@@ -3,15 +3,23 @@ import Swal from 'sweetalert2';
 import * as S from './style';
 import Input from '../Input';
 import StageContext from '../../../contexts/StageContext';
+import UserContext from '../../../contexts/UserContext';
 import Button from '../Button';
 
 export default function UserStage() {
   const { stage, setStage } = useContext(StageContext);
-  const [name, setName] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const [confirmPassword, setConfirmPassword] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [date, setDate] = React.useState('');
+  const {
+    name,
+    setName,
+    password,
+    setPassword,
+    confirmPassword,
+    setConfirmPassword,
+    email,
+    setEmail,
+    date,
+    setDate,
+  } = useContext(UserContext);
 
   function validateStages() {
     const onlyLetters = /^[a-zA-Z ]*$/;
@@ -144,21 +152,11 @@ export default function UserStage() {
       });
     }
 
-    return {
-      name,
-      password,
-      email,
-      date,
-    };
+    return setStage(stage + 1);
   }
 
   function handleSubmit() {
     validateStages();
-    console.log(validateStages());
-    if (stage === 1 && validateStages) {
-      setStage(stage + 1);
-    }
-    console.log(stage);
 
     return null;
   }
