@@ -11,17 +11,24 @@ export default function FinishDashboard() {
     return cep.replace(/(\d{5})(\d{3})/, '$1-$2');
   }
 
+  function formatText(text, separator = ' ') {
+    return text
+      .split(separator)
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+
   return (
     <S.FinishContainer>
       <S.Title>Usuário Criado!</S.Title>
       <S.FinalForm>
         <S.TopSubContainer>
-          <BoxInfo title="Nome" text={name} />
+          <BoxInfo title="Nome" text={formatText(name)} />
           <BoxInfo title="Email" text={email} />
         </S.TopSubContainer>
         <S.DividingLine />
         <S.BottomContainer>
-          <BoxInfo title="Endereço" text={street} />
+          <BoxInfo title="Endereço" text={formatText(street)} />
           <BoxInfo title="Número" text={number} />
           <BoxInfo title="CEP" text={formatCep()} />
         </S.BottomContainer>
@@ -29,7 +36,7 @@ export default function FinishDashboard() {
       <S.ButtonContainer>
         <Buttom
           onClick={() => {
-            console.log('testeee');
+            window.location.reload();
           }}
           color="#5357B1"
           text="Novo usuário"
