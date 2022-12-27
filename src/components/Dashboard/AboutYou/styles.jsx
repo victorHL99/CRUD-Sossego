@@ -24,6 +24,8 @@ export const TextInput = styled.textarea`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+  border-radius: 4px;
+  resize: none;
 `;
 
 export const AboutTitle = styled.label`
