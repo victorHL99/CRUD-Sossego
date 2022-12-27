@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
-  width: 226px;
+  width: ${({ width }) => width || 226}px !important;
   height: 54px;
   background-color: ${({ color }) => color};
   border-radius: 4px;
   border: none;
+  margin-top: ${({ margin }) => margin || 0}px;
 
   font-family: ${({ theme }) => theme.fonts.primary};
   display: flex;
