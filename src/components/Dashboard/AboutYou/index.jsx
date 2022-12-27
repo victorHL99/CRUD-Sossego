@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import * as S from './styles';
 import Button from '../Button';
+import UserContext from '../../../contexts/UserContext';
 import StageContext from '../../../contexts/StageContext';
 
 export default function AboutYou() {
   const { stage, setStage } = useContext(StageContext);
-  const [about, setAbout] = React.useState('');
+  const { about, setAbout } = useContext(UserContext);
 
   function returnStage() {
     setStage(stage - 1);
@@ -16,6 +17,7 @@ export default function AboutYou() {
       <S.AboutContainer>
         <S.AboutTitle>Conte-nos um pouco sobre você</S.AboutTitle>
         <S.TextInput
+          autoFocus
           type="text"
           placeholder="Digite Aqui"
           value={about}
