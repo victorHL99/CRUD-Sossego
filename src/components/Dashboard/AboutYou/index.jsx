@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Swal from 'sweetalert2';
 import * as S from './styles';
 import Button from '../Button';
 import UserContext from '../../../contexts/UserContext';
@@ -26,7 +27,15 @@ export default function AboutYou() {
       </S.AboutContainer>
       <S.ContainerButton>
         <Button
-          onClick={() => setStage(stage + 1)}
+          onClick={() => {
+            setStage(stage + 1);
+            Swal.fire({
+              title: 'Pronto!',
+              text: 'Usuário Criado com Sucesso!',
+              icon: 'success',
+              confirmButtonText: 'Ok',
+            });
+          }}
           color="#5357B1"
           text="Próximo passo"
         />
