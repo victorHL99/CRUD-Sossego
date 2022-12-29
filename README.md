@@ -2,6 +2,14 @@
 
 O projeto foi criado para um desafio técnico como um cadastro de usuário, feito em React e Styled-Components. Foi feito em formato de SPA - Single Page Applications.
 
+## Deploy
+
+É possível acessar a tela de cadastro pelo link:
+
+```bash
+https://crud-sossego.vercel.app/
+```
+
 # Quais tecnologias foram utilizadas?
 
 <p>
