@@ -204,6 +204,7 @@ export default function Address() {
             height="79"
             onInput={cep}
             onSetInput={setCep}
+            nameDataCy="cep"
           />
           <Input
             label="Rua"
@@ -213,6 +214,7 @@ export default function Address() {
             height="79"
             onInput={street}
             onSetInput={setStreet}
+            nameDataCy="street"
           />
         </S.AddressTop>
         <S.AddressMiddle>
@@ -225,6 +227,7 @@ export default function Address() {
               height="79"
               onInput={number}
               onSetInput={setNumber}
+              nameDataCy="number"
             />
             <Input
               label="Bairro"
@@ -234,6 +237,7 @@ export default function Address() {
               height="79"
               onInput={district}
               onSetInput={setDistrict}
+              nameDataCy="district"
             />
           </S.AddressSubMiddle>
           <Input
@@ -244,6 +248,7 @@ export default function Address() {
             height="79"
             onInput={city}
             onSetInput={setCity}
+            nameDataCy="city"
           />
         </S.AddressMiddle>
         <Input
@@ -254,6 +259,7 @@ export default function Address() {
           height="79"
           onInput={reference}
           onSetInput={setReference}
+          nameDataCy="reference"
         />
       </S.AddressContainer>
       <S.ContainerButton>
@@ -261,6 +267,7 @@ export default function Address() {
           onClick={() => nextStage()}
           color="#5357B1"
           text="Próximo passo"
+          nameDataCy="nextStep"
         />
         <Button onClick={() => returnStage()} color="#8C98A9" text="Anterior" />
       </S.ContainerButton>

@@ -172,6 +172,7 @@ export default function UserStage() {
           height="79"
           onInput={name}
           onSetInput={setName}
+          nameDataCy="name"
         />
         <S.InputSubContainer>
           <Input
@@ -182,6 +183,7 @@ export default function UserStage() {
             height="79"
             onInput={password}
             onSetInput={setPassword}
+            nameDataCy="password"
           />
           <Input
             label="Confirmar Senha"
@@ -191,6 +193,7 @@ export default function UserStage() {
             height="79"
             onInput={confirmPassword}
             onSetInput={setConfirmPassword}
+            nameDataCy="confirmPassword"
           />
           <Input
             label="Email"
@@ -200,6 +203,7 @@ export default function UserStage() {
             height="79"
             onInput={email}
             onSetInput={setEmail}
+            nameDataCy="email"
           />
           <Input
             label="Data de nascimento"
@@ -210,6 +214,7 @@ export default function UserStage() {
             format="dd/MM/yyyy"
             onInput={date}
             onSetInput={setDate}
+            nameDataCy="date"
           />
         </S.InputSubContainer>
       </S.InputContainer>
@@ -218,6 +223,7 @@ export default function UserStage() {
           onClick={() => handleSubmit()}
           color="#5357B1"
           text="Próximo passo"
+          nameDataCy="nextStep"
         />
       </S.ContainerButton>
     </>

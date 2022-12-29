@@ -8,11 +8,13 @@ export default function Input({
   height,
   onInput,
   onSetInput,
+  nameDataCy,
 }) {
   return (
     <S.InputContainer width={width} height={height} label={label}>
       <S.InputLabel>{label}</S.InputLabel>
       <S.InputField
+        data-cy={nameDataCy}
         type={type}
         placeholder={placeholder}
         value={onInput}
