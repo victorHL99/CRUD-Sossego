@@ -23,6 +23,7 @@ export default function AboutYou() {
           placeholder="Digite Aqui"
           value={about}
           onChange={e => setAbout(e.target.value)}
+          data-cy="about"
         />
       </S.AboutContainer>
       <S.ContainerButton>
@@ -38,6 +39,7 @@ export default function AboutYou() {
           }}
           color="#5357B1"
           text="Próximo passo"
+          nameDataCy="nextStep"
         />
         <Button onClick={() => returnStage()} color="#8C98A9" text="Anterior" />
       </S.ContainerButton>
