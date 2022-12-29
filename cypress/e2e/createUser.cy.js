@@ -21,7 +21,7 @@ describe('Create User', () => {
       about: faker.lorem.paragraph(),
     };
 
-    cy.visit('http://localhost:3000/');
+    cy.visit('https://crud-sossego.vercel.app/');
     cy.get('[data-cy=name]').type(user.name);
     cy.get('[data-cy=password]').type(user.password);
     cy.get('[data-cy=confirmPassword]').type(user.password);
